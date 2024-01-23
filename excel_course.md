@@ -4,6 +4,8 @@
   - [Change language](#change-language)
   - [Select a range of cells](#select-a-range-of-cells)
   - [Auto-resize rows and columns](#auto-resize-rows-and-columns)
+  - [Add a new line in a cell](#add-a-new-line-in-a-cell)
+  - [Wrap text](#wrap-text)
 
 ## Basic topics
 
@@ -31,3 +33,13 @@ To auto-resize columns, double-click on the right border of the column header. Y
 The same applies to rows.
 
 ![Auto-resize rows and columns](resources/auto_resize_rows_columns.gif)
+
+### Add a new line in a cell
+To add a new line in a cell, simply press `Alt + Enter`. To facilitate writing, you can also expand the text box by pressing the arrow on the right side of it. Then drag the lower border to expand vertically.
+
+![Add a new line in a cell](resources/add_new_line_in_cell.gif)
+
+### Wrap text
+If you have a long text inside a cell and you want it to be wrapped according to the cell width, you can use the `Wrap Text` button in the `Home` tab.
+
+![Wrap text](resources/wrap_text.gif)
