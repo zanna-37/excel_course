@@ -64,6 +64,7 @@ There are 3 ways to freeze panes:
 - Freeze the **first column**
 
 To access these options, go to `View > Freeze Panes`. Options are: `Freeze Panes`, `Freeze Top Row`, and `Freeze First Column`.
+
 Two of the options are self-explanatory. To freeze a **custom range** instead, select the first cell of the sheet that you want to move. Now click on `View > Freeze Panes > Freeze Panes`. This will **freeze all rows and columns above and to the left of the selected cell**.
 
 ![Freeze panes](resources/freeze_panes.gif)
@@ -114,8 +115,8 @@ This happens when the cell is too short to display the value. To fix it, simply 
 
 ### Unexpected numbers when copy-pasting dates
 Dates are internally represented via numbers. Therefore, when copy-pasting dates, if an unexpected number shows up, the problem is probably that the destination cell doesn't have the correct cell type.
+
 See also the [Cell types](#cell-types) section.
 
 ### Unexpected warning "There's already data here. Do you want to replace it?" or "This operation will cause some merged cells to unmerge"
-This might happen when you try to move a range of cells partially over themselves.
-To avoid the error, first move the selection to an empty space and only then move it to the desired location.
+This might happen when you try to move a range of cells partially over themselves. To avoid the error, first move the selection to an empty space and only then move it to the desired location.
