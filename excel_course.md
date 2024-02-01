@@ -10,6 +10,10 @@
   - [Freeze panes](#freeze-panes)
   - [Merge cells](#merge-cells)
   - [Cell types](#cell-types)
+  - [Advanced copy paste](#advanced-copy-paste)
+  - [Clear cells](#clear-cells)
+- [Formulas](#formulas)
+  - [Basic operators](#basic-operators)
 - [Throubleshooting](#throubleshooting)
   - [Having "#####" inside a cell](#having--inside-a-cell)
   - [Unexpected numbers when copy-pasting dates](#unexpected-numbers-when-copy-pasting-dates)
@@ -106,6 +110,87 @@ The main cell types are:
 - There is also the possibility to create a **custom cell type** by using special format characters.
 
 `💡 TIP:` _Many of the above formats have a number of possible customizations. Click `More Number Formats` from the cell type dropdown to access them._
+
+### Advanced copy paste
+When copy-pasting cells, you can choose what to paste.
+
+To access the advanced paste menu, right-click on the cell that you want to fill.
+
+![Advanced copy-paste](resources/advanced_copy_paste.jpg)
+
+Options, going left to right, are:
+- `Paste`
+  - The default copy-paste behavior.
+  - This pastes everything: formatting, values, and formulas.
+  - `⚠️ ATTENTION:` _When pasting formulas, all the references will be relative. For more information see [Formula references](#formula-references)._
+- `Values`
+  - This pastes only the values of the cells.
+  - `💡 TIP:` _This is useful when you want to copy-paste the result of a formula and you don't want it to update when data changes._
+- `Formulas`
+  - This pastes only the formulas of the cells without formatting.
+  - `⚠️ ATTENTION:` _When pasting formulas, all the references will be relative. For more information see [Formula references](#formula-references)._
+- `Transpose`
+  - This pastes the cells in a transposed way, meaning that rows become columns and columns become rows.
+- `Formatting`
+  - This pastes only the formatting of the cells.
+- `Link`
+  - This pastes an absolute reference to the copied cells.
+  - This means that every time the copied cells change, the pasted cells will also change.
+
+The `Paste Special` menu contains other less common options.
+
+`💡 TIP:` _To copy formatting, you can also select the source cells and click `Format Painter` from the `Home` tab. Then, select the cells to paste the formatting to._
+
+![Format Painter](resources/format_painter.jpg)
+
+### Clear cells
+To clear cells, select the cells you want to clear and click on `Home > Clear`. Options are:
+- `Clear All`
+  - This clears everything: formatting, values, and formulas.
+- `Clear Formats`
+  - This clears only the formatting of the cells, keeping the values and formulas.
+- `Clear Contents`
+  - This clears values and formulas.
+- `Clear Comments`
+  - This clears only the comments of the cells.
+- `Clear Hyperlinks`
+  - This clears only the hyperlinks of the cells but the text remains formatted as if it was still a hyperlink.
+- `Remove Hyperlinks`
+  - This removes the hyperlinks of the cells, returning the text to its original formatting.
+
+## Formulas
+The main purpose of Excel is to perform calculations based on the data in the cells. This is done via formulas.
+
+To create a formula, select a cell and type `=`. From now on, the cell will _execute_ the formula rather than showing _what_ you typed.
+
+A simple example is `=1+1`. This formula will show `2` in the cell.
+
+You can also **reference other cells**. For example, if you type `=A1`, the cell will show the value of the cell `A1`. If you type `=A1+A2`, the cell will show the sum of the values of the cells `A1` and `A2`.
+
+`💡 TIP:` _You can also reference cells from other sheets. For example, if you type `=Sheet2!A1`, the cell will show the value of the cell `A1` in the sheet `Sheet2`._
+
+### Basic operators
+To operate on values, you can use the following symbols:
+- `+` (addition)
+- `-` (subtraction)
+- `*` (multiplication)
+- `/` (division)
+- `&` (concatenation)
+  - This is used to concatenate strings. For example, `="Hello" & " " & A1` might show `Hello John` if the value of `A1` is `John`.
+  - `⚠️ ATTENTION:` _When concatenating strings, you need to add the spaces manually. For example, `="Hello" & A1` will show `HelloJohn`._
+- `"` (double quotes, used in pairs)
+  - This is used to write text. For example, `="Hello"` will show `Hello`.
+  - In general, all the text used inside a formula needs to be enclosed in double quotes.
+- `=` (equal)
+- `>` (greater than)
+- `<` (less than)
+- `>=` (greater than or equal)
+- `<=` (less than or equal)
+- `<>` (not equal)
+- `TRUE` (logical true)
+- `FALSE` (logical false)
+
+Operators work on specific **types of values**. For example, the math operators work on numbers, the `&` on text. Other operators such as `=`, `>`, `<`, and `<>` work on logical values and output `TRUE` or `FALSE`. For example, `=2<5` outputs `TRUE`.
 
 -----
 
